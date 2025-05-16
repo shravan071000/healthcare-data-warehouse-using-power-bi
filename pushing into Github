@@ -1,0 +1,4 @@
+git remote add origin https://github.com/YOUR_USERNAME/healthcare-data-warehouse-powerbi.git
+git add .
+git commit -m "Initial commit: SQL + SSIS + Power BI healthcare DWH"
+git push -u origin master
