@@ -1,0 +1,23 @@
+CREATE TABLE DimPatient (
+    PatientID VARCHAR(10) PRIMARY KEY,
+    Name VARCHAR(100),
+    Gender CHAR(1),
+    DOB DATE
+);
+
+CREATE TABLE DimProvider (
+    ProviderID VARCHAR(10) PRIMARY KEY,
+    Name VARCHAR(100),
+    Specialty VARCHAR(50)
+);
+
+CREATE TABLE FactClaim (
+    ClaimID INT PRIMARY KEY,
+    PatientID VARCHAR(10),
+    ProviderID VARCHAR(10),
+    ClaimAmount FLOAT,
+    ServiceDate DATE,
+    DiagnosisCode VARCHAR(10),
+    FOREIGN KEY (PatientID) REFERENCES DimPatient(PatientID),
+    FOREIGN KEY (ProviderID) REFERENCES DimProvider(ProviderID)
+);
