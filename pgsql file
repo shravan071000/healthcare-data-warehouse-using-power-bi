@@ -1,0 +1,14 @@
+healthcare-data-warehouse-powerbi/
+├── ETL/
+│   └── ssis_project.dtsx
+├── Data/
+│   └── raw_claims.csv
+├── SQL/
+│   ├── create_tables.sql
+│   └── populate_data.sql
+├── Reports/
+│   └── healthcare_dashboard.pbix
+├── screenshots/
+│   └── powerbi_dashboard.png
+├── README.md
+└── .gitignore
